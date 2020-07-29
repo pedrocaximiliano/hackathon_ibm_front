@@ -21,7 +21,7 @@ const forewarned = ({ navigation }) => (
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => alert('chamar api')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('chatHelp')}>
                             <Text style={styles.text}>ChatHelp</Text>
                         </TouchableOpacity>
                     </View>

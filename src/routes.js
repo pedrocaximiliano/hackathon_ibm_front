@@ -4,6 +4,8 @@ import Main from './pages/main';
 import CovidRadar from './pages/covidRadar';
 import Watson from './pages/watson';
 
+import WatsonMsg from './pages/watsonMsg';
+
 import Welcome from './pages/welcome';
 import Forewarned from './pages/forewarned';
 import Dashboard from './pages/dashboard';
@@ -26,6 +28,7 @@ export default function Routes() {
                 <Stack.Screen name="Bem vindo!" component={Welcome} />
                 <Stack.Screen name="previna-se!" component={Forewarned} />
                 <Stack.Screen name="dashboard" component={Dashboard} />
+                <Stack.Screen name="chatHelp" component={WatsonMsg} />
             </Stack.Navigator>
         </NavigationContainer>
     )
