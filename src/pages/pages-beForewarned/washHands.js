@@ -3,33 +3,34 @@ import React from 'react';
 
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import ButtonComponent  from '../components/button';
+import ButtonComponent  from '../../components/button';
 
-const covidRadar = ({ navigation }) => (
+const washHands = ({ navigation }) => (
     <View style={styles.container}>
        
         <View>
             <Image
                 style={styles.tinyLogo}
-                source={require('../assests/logo_conexao.png')}>
+                source={require('../../assests/logo_washHands.png')}>
             </Image>
         </View>
         <View  style={styles.body}>
+        <Text style={{alignItems: 'center', fontSize: 18,  fontWeight: 'bold',}}> 
+            lave as mãoes
+         </Text>
             <Text style={styles.text}> 
-                Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-                com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-                opta por notificar as pessoas com quem acabou passando perto.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae
          </Text>
         </View>
-        <ButtonComponent navigation={navigation} path={'watson'} />
+        <ButtonComponent navigation={navigation} path={'useAlcohol'} />
     </View>
 );
 
-covidRadar.navigationOptions = {
-    title: 'watson',
+washHands.navigationOptions = {
+    title: 'washHands',
 }
 
-export default covidRadar;
+export default washHands;
 
 const styles = StyleSheet.create({
     container: {
@@ -49,11 +50,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     tinyLogo: {
-        width: 150,
-        height: 150,
+        width: 130,
+        height: 130,
     },
     text: {
+        alignItems: 'center',
         width: 250,
+        marginTop: 10,
         textAlign: 'justify',
     },
 });

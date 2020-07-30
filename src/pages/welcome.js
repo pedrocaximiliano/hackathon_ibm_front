@@ -13,10 +13,12 @@ const watson = ({ navigation }) => (
                 source={require('../assests/logo_ibm_watson.png')}>
             </Image>
         </View>
-        <View style={styles.body}>
-            <Text style={styles.text}>
-               Nesses tempos difíceis sabemos que muitas informações são veiculadas e por vezes ficamos perdidos. Desenvolvemos então esse aplicativo para ser sua ferramenta mais forte contra a desinformação e contra o covid-19.
-            </Text>
+        <View  style={styles.body}>
+            <Text style={styles.text}> 
+                Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
+                com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
+                opta por notificar as pessoas com quem acabou passando perto.
+         </Text>
         </View>
         <ButtonComponent navigation={navigation} path={'Home'}
         />
@@ -52,6 +54,7 @@ const styles = StyleSheet.create({
     },
     text: {
         width: 250,
+        textAlign: 'justify',
     },
 });
 

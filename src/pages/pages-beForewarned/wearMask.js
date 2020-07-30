@@ -3,33 +3,34 @@ import React from 'react';
 
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import ButtonComponent  from '../components/button';
+import ButtonComponent  from '../../components/button';
 
-const covidRadar = ({ navigation }) => (
+const wearMask = ({ navigation }) => (
     <View style={styles.container}>
        
         <View>
             <Image
                 style={styles.tinyLogo}
-                source={require('../assests/logo_conexao.png')}>
+                source={require('../../assests/logo_useMask.png')}>
             </Image>
         </View>
         <View  style={styles.body}>
+        <Text style={{alignItems: 'center', fontSize: 18,  fontWeight: 'bold',}}> 
+            use máscara
+         </Text>
             <Text style={styles.text}> 
-                Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-                com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-                opta por notificar as pessoas com quem acabou passando perto.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae
          </Text>
         </View>
-        <ButtonComponent navigation={navigation} path={'watson'} />
+        <ButtonComponent navigation={navigation} path={'washHands'} />
     </View>
 );
 
-covidRadar.navigationOptions = {
-    title: 'watson',
+wearMask.navigationOptions = {
+    title: 'wearMask',
 }
 
-export default covidRadar;
+export default wearMask;
 
 const styles = StyleSheet.create({
     container: {
@@ -54,6 +55,7 @@ const styles = StyleSheet.create({
     },
     text: {
         width: 250,
+        marginTop: 10,
         textAlign: 'justify',
     },
 });

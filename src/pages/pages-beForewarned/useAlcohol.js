@@ -3,33 +3,40 @@ import React from 'react';
 
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import ButtonComponent  from '../components/button';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const covidRadar = ({ navigation }) => (
+const useAlcohol = ({ navigation }) => (
     <View style={styles.container}>
        
         <View>
             <Image
                 style={styles.tinyLogo}
-                source={require('../assests/logo_conexao.png')}>
+                source={require('../../assests/logo_useAlcohol.png')}>
             </Image>
         </View>
         <View  style={styles.body}>
+        <Text style={{alignItems: 'center', fontSize: 18,  fontWeight: 'bold',}}> 
+            use alcool
+         </Text>
             <Text style={styles.text}> 
-                Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-                com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-                opta por notificar as pessoas com quem acabou passando perto.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae
          </Text>
         </View>
-        <ButtonComponent navigation={navigation} path={'watson'} />
+        <View style={styles.button}>
+        <Icon name="cancel" 
+          size={58} 
+          color="#2A56C6" 
+          onPress={() => navigation.navigate('Home')}
+        />
+    </View>
     </View>
 );
 
-covidRadar.navigationOptions = {
-    title: 'watson',
+useAlcohol.navigationOptions = {
+    title: 'useAlcohol',
 }
 
-export default covidRadar;
+export default useAlcohol;
 
 const styles = StyleSheet.create({
     container: {

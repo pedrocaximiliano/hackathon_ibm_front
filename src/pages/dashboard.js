@@ -7,9 +7,6 @@ import { View, ActivityIndicator, StyleSheet, Text, SafeAreaView, ScrollView } f
 import * as shape from 'd3-shape'
 export default function dashboard() {
 
-
-    const [games, setGames] = useState([]);
-
     const [loading, setLoading] = useState(true);
     useEffect(() => {
 

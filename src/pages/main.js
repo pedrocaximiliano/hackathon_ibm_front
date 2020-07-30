@@ -4,17 +4,24 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 
 const main = ({ navigation }) => (
   <>
-    <View style={{flex: 1, margin: 6}}>
+    <View style={{ flex: 1, margin: 6 }}>
       <View style={styles.container}>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget.</Text>
+        <View style={styles.body}>
+          <Text style={styles.text}>
+            Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
+            com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
+            opta por notificar as pessoas com quem acabou passando perto.
+            Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
+            com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
+            opta por notificar as pessoas com quem acabou passando perto.
+         </Text>
+        </View>
       </View>
       <View style={styles.button}>
         <Button
+          color={'#2A56C6'}
           title="aceito os termos"
-          onPress={() => navigation.navigate('radar covid')}
+          onPress={() => navigation.navigate('radarCovid')}
         />
       </View>
     </View>
@@ -35,10 +42,16 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   button: {
-    marginBottom: 50,
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
-
+  text: {
+    width: 250,
+    textAlign: 'justify',
+  },
+  body: {
+    alignItems: 'center',
+  }
 });

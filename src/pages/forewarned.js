@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     },
     text: {
         width: 250,
+        textAlign: 'justify',
     },
 
 

@@ -1,7 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import { View, Button, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+
+import Icon from 'react-native-vector-icons/Entypo';
+import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const forewarned = ({ navigation }) => (
     <>
@@ -16,25 +20,29 @@ const forewarned = ({ navigation }) => (
                 </View>
                 <View style={styles.container}>
                     <View>
-                        <TouchableOpacity onPress={() => alert('chamar api')}>
-                            <Text style={styles.text}>Radar Covid</Text>
+                        <TouchableOpacity style={styles.text} onPress={() => alert('chamar api')}>
+                            <Text style={{ color: '#ccc' }}>Radar-Covid</Text>
+                            <Text><IconMaterialCommunityIcons name="radar" size={38} color="#ccc" /></Text>
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => navigation.navigate('chatHelp')}>
-                            <Text style={styles.text}>ChatHelp</Text>
+                        <TouchableOpacity style={styles.text} onPress={() => navigation.navigate('chatHelp')}>
+                            <Text style={{ color: '#ccc' }}>ChatHelp</Text>
+                            <Text><Icon name="warning" size={38} color="#ccc" /></Text>
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.container}>
                     <View>
-                        <TouchableOpacity onPress={() => alert('chamar api')}>
-                            <Text style={styles.text}>Precina-se</Text>
+                        <TouchableOpacity style={styles.text} onPress={() => navigation.navigate('wearMask')}>
+                            <Text style={{ color: '#ccc' }}>Previna-se</Text>
+                            <Text><Icon name="warning" size={38} color="#ccc" /></Text>
                         </TouchableOpacity>
                     </View>
                     <View >
-                        <TouchableOpacity onPress={() => navigation.navigate('dashboard')}>
-                            <Text style={styles.text}>Dashboard</Text>
+                        <TouchableOpacity style={styles.text} onPress={() => navigation.navigate('dashboard')}>
+                            <Text style={{ color: '#ccc' }}>Painel</Text>
+                            <Text><IconMaterialIcons name="dashboard" size={38} color="#ccc" /></Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -63,14 +71,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     text: {
-        fontSize: 16,
+        fontSize: 14,
         borderRadius: 15,
         width: 120,
         height: 100,
         backgroundColor: '#2A56C6',
         textAlign: 'center',
-        marginTop: 5,
+        color: '#ccc',
+        marginTop: 4,
         padding: 20,
+        alignItems: 'center'
     },
     tinyLogo: {
         width: 150,
