@@ -25,10 +25,6 @@ const watson = ({navigation}) => (
   </View>
 );
 
-watson.navigationOptions = {
-  title: 'watson',
-};
-
 export default watson;
 
 const styles = StyleSheet.create({

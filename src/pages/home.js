@@ -28,7 +28,7 @@ function home({navigation}) {
     // } catch (error) {
     //     alert('erro, verifique a conexão com a internet');
     // }
-    redirectRadarCovid('alert');
+    redirectRadarCovid('security');
   }
 
   function redirectRadarCovid(key) {
@@ -103,10 +103,6 @@ function home({navigation}) {
     </SafeAreaView>
   );
 }
-
-home.navigationOptions = {
-  title: 'previna-se',
-};
 
 export default home;
 

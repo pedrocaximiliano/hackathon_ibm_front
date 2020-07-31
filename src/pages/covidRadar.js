@@ -23,10 +23,6 @@ const covidRadar = ({navigation}) => (
   </View>
 );
 
-covidRadar.navigationOptions = {
-  title: 'watson',
-};
-
 export default covidRadar;
 
 const styles = StyleSheet.create({

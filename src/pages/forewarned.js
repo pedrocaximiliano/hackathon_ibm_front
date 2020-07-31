@@ -22,10 +22,6 @@ const forewarned = ({navigation}) => (
   </View>
 );
 
-forewarned.navigationOptions = {
-  title: 'previna-se',
-};
-
 export default forewarned;
 
 const styles = StyleSheet.create({
