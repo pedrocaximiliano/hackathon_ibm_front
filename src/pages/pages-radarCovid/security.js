@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
   imgStatus: {
     width: 300,
     height: 300,
-    textAlign: 'center',
     alignItems: 'center',
     marginTop: 100,
   },
