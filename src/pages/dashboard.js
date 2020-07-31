@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StackedAreaChart, LineChart, Grid, YAxis, ProgressCircle, PieChart } from 'react-native-svg-charts'
+import { StackedAreaChart, Grid, YAxis, ProgressCircle, PieChart } from 'react-native-svg-charts'
 
 import { View, ActivityIndicator, StyleSheet, Text, SafeAreaView, ScrollView } from 'react-native';
 

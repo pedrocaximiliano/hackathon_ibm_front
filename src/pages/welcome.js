@@ -7,20 +7,24 @@ import ButtonComponent  from '../components/button';
 
 const watson = ({ navigation }) => (
     <View style={styles.container}>
-        <View>
+        <View style={styles.imagemContainer}>
             <Image
                 style={styles.tinyLogo}
-                source={require('../assests/logo_ibm_watson.png')}>
+                source={require('../assests/logo_welcome.png')}>
             </Image>
+            <Image
+                style={styles.tinyLogo1}
+                source={require('../assests/logo_welcome.png')}>
+            </Image>
+            
         </View>
         <View  style={styles.body}>
             <Text style={styles.text}> 
-                Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-                com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-                opta por notificar as pessoas com quem acabou passando perto.
+            Nesses tempos difíceis sabemos que muitas informações são veiculadas e por vezes ficamos perdidos. 
+            Desenvolvemos então esse aplicativo para ser sua ferramenta mais forte contra a desinformação e contra o covid-19.
          </Text>
         </View>
-        <ButtonComponent navigation={navigation} path={'Home'}
+        <ButtonComponent navigation={navigation} path={'radarCovid'}
         />
     </View>
 );
@@ -34,9 +38,9 @@ export default watson;
 const styles = StyleSheet.create({
     container: {
         marginTop: '15%',
-        alignItems: 'center',
         flex: 1,
         flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'space-between',
     },
     button: {
@@ -45,12 +49,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    body: {
+    imagemContainer: {
+        flexDirection: 'column',
         alignItems: 'center',
+
     },
     tinyLogo: {
-        width: 150,
-        height: 150,
+        width: 120,
+        height: 80,
+        alignSelf: 'center'
+    },
+    tinyLogo1: {
+        width: 120,
+        marginEnd: 60,
+        marginTop: -20,
+        height: 80,
     },
     text: {
         width: 250,

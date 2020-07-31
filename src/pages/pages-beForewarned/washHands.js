@@ -7,8 +7,7 @@ import ButtonComponent  from '../../components/button';
 
 const washHands = ({ navigation }) => (
     <View style={styles.container}>
-       
-        <View>
+        <View style={styles.border}>
             <Image
                 style={styles.tinyLogo}
                 source={require('../../assests/logo_washHands.png')}>
@@ -16,7 +15,7 @@ const washHands = ({ navigation }) => (
         </View>
         <View  style={styles.body}>
         <Text style={{alignItems: 'center', fontSize: 18,  fontWeight: 'bold',}}> 
-            lave as mãoes
+            lave as mãos
          </Text>
             <Text style={styles.text}> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae
@@ -34,7 +33,7 @@ export default washHands;
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: '15%',
+        marginTop: '5%',
         alignItems: 'center',
         flex: 1,
         flexDirection: 'column',
@@ -50,14 +49,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     tinyLogo: {
-        width: 130,
-        height: 130,
+        width: 120,
+        marginTop: 30,
+        height: 100,
     },
     text: {
-        alignItems: 'center',
         width: 250,
         marginTop: 10,
         textAlign: 'justify',
+    },
+    border: {
+        borderRadius: 150,
+        width: 150,
+        height: 150,
+        marginBottom: 20,
+        backgroundColor: 'white',
+        textAlign: 'center',
+        alignItems: 'center'
     },
 });
 

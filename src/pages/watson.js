@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { View, Text, StyleSheet, Image } from 'react-native';
 
@@ -15,10 +15,12 @@ const watson = ({ navigation }) => (
         </View>
         <View style={styles.body}>
             <Text style={styles.text}>
-                Caso haja dúvidas que você gostaria de perguntar para alguém, pode perguntar ao Watson, o assistente virtual da IBM! Ele é inteligente o suficiente para entender suas perguntas e responder de acordo com as informações oficiais de órgãos governamentais e de saúde mundiais!
-                    </Text>
+                Caso haja dúvidas que você gostaria de perguntar para alguém, pode perguntar ao Watson, 
+                o assistente virtual da IBM! Ele é inteligente o suficiente para entender suas perguntas 
+                e responder de acordo com as informações oficiais de órgãos governamentais e de saúde mundiais!
+            </Text>
         </View>
-        <ButtonComponent navigation={navigation} path={'previna-se!'}
+        <ButtonComponent navigation={navigation} path={'forewarned'}
         />
     </View>
 );
@@ -54,8 +56,6 @@ const styles = StyleSheet.create({
         width: 250,
         textAlign: 'justify',
     },
-
-
 });
 
 

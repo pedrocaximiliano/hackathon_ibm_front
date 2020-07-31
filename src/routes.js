@@ -3,17 +3,19 @@ import React from 'react';
 import Main from './pages/main';
 import CovidRadar from './pages/covidRadar';
 import Watson from './pages/watson';
-import WatsonMsg from './pages/watsonMsg';
+import watsonWebView from './pages/watsonWebView';
 import Welcome from './pages/welcome';
 import Forewarned from './pages/forewarned';
 import Dashboard from './pages/dashboard';
 import Home from './pages/home';
 
-{/* //rotas previna-se */}
 import UseAlcohol from './pages/pages-beForewarned/useAlcohol';
 import WashHands from './pages/pages-beForewarned/washHands';
 import WearMask from './pages/pages-beForewarned/wearMask';
 
+import Alert from './pages/pages-radarCovid/alert';
+import Security from './pages/pages-radarCovid/security';
+import Warning from './pages/pages-radarCovid/warning';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -22,7 +24,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 export default function Routes() {
-
 
 function handlerOption(name) {
     const routerOptions = {
@@ -41,18 +42,23 @@ function handlerOption(name) {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen component={Main} name="política de privacidade" options={handlerOption('Política de privacidade')}/>
-                <Stack.Screen component={Home} name="Home" options={handlerOption('Home')}/>
+                 <Stack.Screen name="welcome" component={Welcome} options={handlerOption('Bem Vindo !')}/>
                 <Stack.Screen name="radarCovid" component={CovidRadar} options={handlerOption('Radar-Covid')}/>
                 <Stack.Screen name="watson" component={Watson} options={handlerOption('Chat para dúvidas')}/>
-                <Stack.Screen name="Bem vindo!" component={Welcome} options={handlerOption('Bem Vindo !')}/>
-                <Stack.Screen name="previna-se!" component={Forewarned} options={handlerOption('Previna-se')}/>
+                <Stack.Screen name="forewarned" component={Forewarned} options={handlerOption('Previna-se')}/>
+                <Stack.Screen name="home" component={Home} options={handlerOption('Home')}/>
                 <Stack.Screen name="dashboard" component={Dashboard} options={handlerOption('Painel')}/>
-                <Stack.Screen name="chatHelp" component={WatsonMsg} options={handlerOption('Chat')} />
-                {/* //rotas previna-se */}
+                <Stack.Screen name="chatHelp" component={watsonWebView} options={handlerOption('Chat')} />
+
+                {/* //routes be forewarned */}
                 <Stack.Screen name="washHands" component={WashHands} options={handlerOption('Previna-se')}/>
                 <Stack.Screen name="wearMask" component={WearMask} options={handlerOption('Previna-se')}/>
                 <Stack.Screen name="useAlcohol" component={UseAlcohol} options={handlerOption('Previna-se')}/>
+
+                {/* //routes radar-covid */}
+                <Stack.Screen name="alert" component={Alert} options={handlerOption('Radar-Covid')}/>
+                <Stack.Screen name="security" component={Security} options={handlerOption('Radar-Covid')}/>
+                <Stack.Screen name="warning" component={Warning} options={handlerOption('Radar-Covid')}/>
            
             </Stack.Navigator>
         </NavigationContainer>

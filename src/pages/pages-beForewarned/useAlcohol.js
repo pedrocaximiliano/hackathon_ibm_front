@@ -9,10 +9,12 @@ const useAlcohol = ({ navigation }) => (
     <View style={styles.container}>
        
         <View>
+        <View style={styles.border}>
             <Image
                 style={styles.tinyLogo}
                 source={require('../../assests/logo_useAlcohol.png')}>
             </Image>
+            </View>
         </View>
         <View  style={styles.body}>
         <Text style={{alignItems: 'center', fontSize: 18,  fontWeight: 'bold',}}> 
@@ -26,7 +28,7 @@ const useAlcohol = ({ navigation }) => (
         <Icon name="cancel" 
           size={58} 
           color="#2A56C6" 
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('home')}
         />
     </View>
     </View>
@@ -40,7 +42,7 @@ export default useAlcohol;
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: '15%',
+        marginTop: '5%',
         alignItems: 'center',
         flex: 1,
         flexDirection: 'column',
@@ -56,12 +58,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     tinyLogo: {
-        width: 150,
-        height: 150,
+        width: 120,
+        marginTop: 30,
+        height: 100,
     },
     text: {
         width: 250,
+        marginTop: 10,
         textAlign: 'justify',
+    },
+    border: {
+        borderRadius: 150,
+        width: 150,
+        height: 150,
+        marginBottom: 20,
+        backgroundColor: 'white',
+        textAlign: 'center',
+        alignItems: 'center'
     },
 });
 

@@ -1,19 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import { View, Button, Text, StyleSheet } from 'react-native';
+import { View, Button, Text, StyleSheet, AsyncStorage  } from 'react-native';
 
-const main = ({ navigation }) => (
-  <>
+import { onSignIn } from "../services/auth";
+
+export default function main ({ navigation }) {
+
+
+  function _storeData() {
+    // AsyncStorage.setItem(
+    //   'key do dispositivo',
+    // );
+    onSignIn().then(() => navigation.navigate("home"));
+
+  }
+
+  return (
     <View style={{ flex: 1, margin: 6 }}>
       <View style={styles.container}>
         <View style={styles.body}>
           <Text style={styles.text}>
-            Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-            com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-            opta por notificar as pessoas com quem acabou passando perto.
-            Temos o Radar Covid! Esta ferramenta te notifica quando você pode ter encontrado uma pessoa
-            com covid-19. Nenhum dado pessoal é armazenado, é tudo anônimo! Ao testar positivo você
-            opta por notificar as pessoas com quem acabou passando perto.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. 
+          Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. 
+          Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. 
+          Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. 
+          Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget.
          </Text>
         </View>
       </View>
@@ -21,18 +34,12 @@ const main = ({ navigation }) => (
         <Button
           color={'#2A56C6'}
           title="aceito os termos"
-          onPress={() => navigation.navigate('radarCovid')}
+          onPress={() => _storeData()}
         />
       </View>
     </View>
-  </>
-);
-
-main.navigationOptions = {
-  title: 'main',
-}
-
-export default main;
+  )
+};
 
 const styles = StyleSheet.create({
   container: {
