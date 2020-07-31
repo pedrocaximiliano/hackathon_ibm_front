@@ -144,8 +144,6 @@ const styles = StyleSheet.create({
   },
   subtext: {
     fontSize: 12,
-    // width: 80,
-    // height: 80,
     alignItems: 'center',
     fontFamily: 'Manrope-SemiBold',
     textAlign: 'justify',
