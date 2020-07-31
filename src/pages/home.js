@@ -28,7 +28,7 @@ function home({navigation}) {
     // } catch (error) {
     //     alert('erro, verifique a conexão com a internet');
     // }
-    redirectRadarCovid('security');
+    redirectRadarCovid('alertFirstStage');
   }
 
   function redirectRadarCovid(key) {
@@ -39,6 +39,12 @@ function home({navigation}) {
         return navigation.navigate('security');
       case 'alert':
         return navigation.navigate('alert');
+      case 'alertFirstStage':
+        return navigation.navigate('alertFirstStage');
+      case 'alertSecondStage':
+        return navigation.navigate('alealertSecondStagert');
+      case 'alertThirdStage':
+        return navigation.navigate('alertThirdStage');
       default:
         return alert('erro busque novamente');
     }

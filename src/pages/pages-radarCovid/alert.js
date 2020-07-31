@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: '#2A56C6',
     textAlign: 'center',
-    color: '#ccc',
+    color: '#fff',
     padding: 20,
     alignItems: 'center',
   },

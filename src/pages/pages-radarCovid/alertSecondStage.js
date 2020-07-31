@@ -1,42 +1,68 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   View,
   StyleSheet,
   Text,
-  Button,
+  Linking,
   ScrollView,
   SafeAreaView,
-  Image,
+  Button,
+  TextInput,
 } from 'react-native';
 
-const AlertThirdStage = ({navigation}) => {
+import IconOcticons from 'react-native-vector-icons/Octicons';
+
+function alertSecondStage({navigation}) {
+  const [code, setCode] = useState();
+
+  function sendCode() {
+    if (code) {
+      alert('Código enviado!');
+      navigation.navigate('alertThirdStage');
+    } else {
+      alert('Digite o código!');
+    }
+
+    //apos enviar o codigo para a API receber um response de 'ok' e limpar estado (code)
+
+    setCode('');
+  }
+
   return (
     <SafeAreaView style={styles.scroll}>
       <ScrollView>
         <View style={styles.container}>
-          <Image
-            style={styles.tinyLogo}
-            source={require('../../assets/logo_check.png')}></Image>
+          <Text style={styles.icon}>
+            <IconOcticons name="alert" size={120} color="red" />
+          </Text>
           <Text style={styles.text}>
-            Mantenha as recomendações médicas e siga as regras de isolamento
-            social!
+            Insira o código fornecido pelo médico ou especialista da saúde.
             {'\n'}
+            Assim você poderá notificar outras pessoas de forma anônima e
+            segura!
+          </Text>
+          <TextInput
+            maxLength={10}
+            style={styles.input}
+            placeholder="Insira o código"
+            autoCorrect={false}
+            value={code}
+            onChangeText={setCode}
+            required
+          />
+          <Text style={styles.textPhone} onPress={() => sendCode()}>
+            Enviar
           </Text>
           <Text style={styles.textInformation}>
-            Obrigado pela sua participação! {'\n\n'}Todos contra o COVID!
-          </Text>
-          <Text
-            style={styles.textPhone}
-            onPress={() => navigation.navigate('home')}>
-            Home
+            Nenhuma informação sua será compartilhada!
           </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
-};
-export default AlertThirdStage;
+}
+export default alertSecondStage;
 
 const styles = StyleSheet.create({
   container: {
@@ -67,8 +93,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
     marginTop: 40,
-    fontSize: 20,
-    width: 260,
+    fontSize: 16,
+    width: 200,
     textAlign: 'justify',
     fontFamily: 'Manrope-Bold',
   },
@@ -107,9 +133,15 @@ const styles = StyleSheet.create({
   body: {
     alignItems: 'center',
   },
-  tinyLogo: {
-    width: 250,
-    height: 250,
-    resizeMode: 'contain',
+  input: {
+    marginTop: 50,
+    height: 60,
+    width: '90%',
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    marginBottom: 8,
+    paddingHorizontal: 24,
+    fontSize: 16,
+    borderColor: 'gray',
   },
 });

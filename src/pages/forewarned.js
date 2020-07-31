@@ -14,7 +14,7 @@ const forewarned = ({navigation}) => (
     <View style={styles.body}>
       <Text style={styles.text}>
         Aqui você vai conseguir saber como se prevenir e encontrar os principais
-        dados sobre o corona vírus, quais o número de infectados assim como o
+        dados sobre o corona vírus, quais os números de infectados assim como o
         número de recuperados e muito mais!
       </Text>
     </View>
