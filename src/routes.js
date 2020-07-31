@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Text} from 'react-native';
+
 import Main from './pages/main';
 import CovidRadar from './pages/covidRadar';
 import Watson from './pages/watson';
@@ -16,6 +18,10 @@ import WearMask from './pages/pages-beForewarned/wearMask';
 import Alert from './pages/pages-radarCovid/alert';
 import Security from './pages/pages-radarCovid/security';
 import Warning from './pages/pages-radarCovid/warning';
+
+import AlertSecundStage from './pages/pages-radarCovid/alertSecundStage';
+import AlertThirdStage from './pages/pages-radarCovid/alertThirdStage';
+import AlertFirstStage from './pages/pages-radarCovid/alertFirstStage';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -59,8 +65,32 @@ function handlerOption(name) {
                 <Stack.Screen name="alert" component={Alert} options={handlerOption('Radar-Covid')}/>
                 <Stack.Screen name="security" component={Security} options={handlerOption('Radar-Covid')}/>
                 <Stack.Screen name="warning" component={Warning} options={handlerOption('Radar-Covid')}/>
+
+                <Stack.Screen name="alertThirdStage" component={AlertThirdStage} options={{
+                     title: 'Radar-Covid',
+                     headerStyle: {
+                         backgroundColor: '#2A56C6',
+                     },
+                     headerTintColor: '#fff',
+                     headerTitleStyle: {
+                         fontWeight: 'bold',
+                     },
+                    headerLeft: () => (
+                        <Text
+                          title=""
+                          color="#2A56C6"
+                        />
+                    ),
+                }}/>
+
+                <Stack.Screen name="alertSecundStage" component={AlertSecundStage} options={handlerOption('Radar-Covid')}/>
+
+                {/* para não dar conflito criei ess alertFirstStage ele esta igual o "alert" padrão  */}
+                <Stack.Screen name="alertFirstStage" component={AlertFirstStage} options={handlerOption('Radar-Covid')}/>
            
             </Stack.Navigator>
         </NavigationContainer>
+
+   
     )
 }

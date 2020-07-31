@@ -32,7 +32,7 @@ function home({ navigation })  {
             case 'security':
                 return navigation.navigate('security')
             case 'alert':
-                return navigation.navigate('alert')
+                return navigation.navigate('alertFirstStage')
             default:
                 return alert('erro busque novamente')
         }
