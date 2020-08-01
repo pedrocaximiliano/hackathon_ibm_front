@@ -10,14 +10,15 @@ import {
   Image,
 } from 'react-native';
 
-const AlertThirdStage = ({navigation}) => {
+const alertThirdStage = ({navigation}) => {
   return (
     <SafeAreaView style={styles.scroll}>
       <ScrollView>
         <View style={styles.container}>
           <Image
             style={styles.tinyLogo}
-            source={require('../../assets/logo_check.png')}></Image>
+            source={require('../../assets/logo_check.png')}
+          />
           <Text style={styles.text}>
             Mantenha as recomendações médicas e siga as regras de isolamento
             social!
@@ -36,7 +37,7 @@ const AlertThirdStage = ({navigation}) => {
     </SafeAreaView>
   );
 };
-export default AlertThirdStage;
+export default alertThirdStage;
 
 const styles = StyleSheet.create({
   container: {

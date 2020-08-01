@@ -42,7 +42,7 @@ function home({navigation}) {
       case 'alertFirstStage':
         return navigation.navigate('alertFirstStage');
       case 'alertSecondStage':
-        return navigation.navigate('alealertSecondStagert');
+        return navigation.navigate('alertSecondStage');
       case 'alertThirdStage':
         return navigation.navigate('alertThirdStage');
       default:
